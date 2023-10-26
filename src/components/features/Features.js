@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "../layouts/Title";
 import Card from "./Card";
 import { featuresData } from "../../data/data";
+
 const Features = () => {
+  const itemsPerPage = 6;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Calculate the index range for the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  // Slice the data array to get the items for the current page
+  const paginatedData = featuresData.slice(startIndex, endIndex);
+
+  // Function to handle page change
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <section
       id="features"
@@ -10,8 +26,25 @@ const Features = () => {
     >
       <Title title="Features" des="What I Do" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
-        {featuresData.map((item) => (
+        {paginatedData.map((item) => (
           <Card item={item} key={item.id} />
+        ))}
+      </div>
+
+      {/* Pagination controls */}
+      <div className="flex justify-center mt-4">
+        {Array.from({
+          length: Math.ceil(featuresData.length / itemsPerPage),
+        }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => handlePageChange(index + 1)}
+            className={`mx-2 p-2 cursor-pointer mt-10 ${
+              currentPage === index + 1 ? "text-blue-500" : "text-white"
+            }`}
+          >
+            {index + 1}
+          </button>
         ))}
       </div>
     </section>
