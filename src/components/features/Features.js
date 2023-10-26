@@ -1,20 +1,17 @@
 import React, { useState } from "react";
-import Title from "../layouts/Title";
 import Card from "./Card";
 import { featuresData } from "../../data/data";
+import { Title } from "../ui/Title/Title";
 
 const Features = () => {
   const itemsPerPage = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Calculate the index range for the current page
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  // Slice the data array to get the items for the current page
   const paginatedData = featuresData.slice(startIndex, endIndex);
 
-  // Function to handle page change
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -24,14 +21,12 @@ const Features = () => {
       id="features"
       className="w-full py-20 border-b-[1px] border-b-black"
     >
-      <Title title="Features" des="What I Do" />
+      <Title title1={"Features and Skills"} title2={"Features and Skills"} />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
         {paginatedData.map((item) => (
           <Card item={item} key={item.id} />
         ))}
       </div>
-
-      {/* Pagination controls */}
       <div className="flex justify-center mt-4">
         {Array.from({
           length: Math.ceil(featuresData.length / itemsPerPage),

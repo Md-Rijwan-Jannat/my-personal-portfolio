@@ -9,7 +9,7 @@ import { navLinksdata } from "../../constants";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className="w-full h-24 py-5 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
+    <div className="w-full h-[130px] py-5 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont">
       <div className="flex items-center gap-">
         <h2 className="bg-white text-lg lg:text-2xl uppercase px-2 py-3 text-black font-[700]">
           {" "}
@@ -24,7 +24,7 @@ const Navbar = () => {
           {navLinksdata.map(({ _id, title, link }) => (
             <li className="link-btn" key={_id}>
               <Link
-                activeClass="border-t-2 border-white"
+                activeClass="border-t-4 border-white"
                 to={link}
                 spy={true}
                 smooth={true}
