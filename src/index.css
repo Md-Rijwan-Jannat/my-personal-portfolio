@@ -27,3 +27,44 @@
 .scrollbar-hide::-webkit-scrollbar{
     display: none;
 }
+
+/* link.link-btn  */
+.link-btn {
+    font-size: 14px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 500ms;
+    transition-property: color;
+  }
+  
+.link-btn:focus,
+.link-btn:hover {
+    color: #fff;
+  }
+  
+.link-btn:focus:after,
+.link-btn:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+.link-btn:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }

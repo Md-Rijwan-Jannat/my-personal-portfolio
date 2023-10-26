@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      screens:{
+      screens: {
         xs: "320px",
         sm: "375px",
         sml: "500px",
@@ -18,13 +18,13 @@ module.exports = {
         titleFont: ["Montserrat", "sans-serif"],
       },
       colors: {
-        bodyColor: "#212428",
+        bodyColor: "#000000",
         lightText: "#c4cfde",
-        boxBg: "linear-gradient(145deg, #1e2024, #23272b)",
-        designColor: "#ff014f",
+        boxBg: "linear-gradient(#145deg, #1e2024, #000033)",
+        designColor: "#003FC7",
       },
       boxShadow: {
-        shadowOne: "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
+        shadowOne: "1px 1px 13px #20232e,-1px -1px 33px #000033",
       },
     },
   },

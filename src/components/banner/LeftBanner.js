@@ -18,12 +18,11 @@ const LeftBanner = () => {
   return (
     <div className="w-full lgl:w-1/2 flex flex-col gap-20">
       <div className="flex flex-col gap-5">
-        <h4 className=" text-lg font-normal">WELCOME TO MY WORLD</h4>
-        <h1 className="text-5xl font-bold text-white">
+        <h1 className="text-3xl lg:text-5xl font-bold text-white">
           Hi, I'm{" "}
           <span className="text-designColor capitalize">Rijwan Jannat</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-xl lg:text-4xl font-bold text-white">
           a <span>{text}</span>
           <Cursor
             cursorBlinking="false"
@@ -32,12 +31,10 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
-          "As a MERN stack developer, I have the privilege of creating digital
-          wonders. My code serves as the brush, delicately crafting web
-          experiences that both innovate and inspire. Persistence is my guiding
-          light, for it's through dedication that I mold the future. I continue
-          to code, I continue to evolve, and with each line, my journey adds to
-          the ever-changing canvas of possibilities."
+          As a MERN stack developer, I craft digital marvels with my code,
+          forging web experiences that inspire innovation. Persistence is my
+          compass, guiding me to shape the future. I code, I evolve, and with
+          each line, I paint on the canvas of endless possibilities. 🚀🎨💻
         </p>
       </div>
       {/* Media */}
