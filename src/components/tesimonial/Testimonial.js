@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import { RiStarFill } from "react-icons/ri";
 import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
-import Title from "../layouts/Title";
 import { testimonialOne, testimonialTwo, quote } from "../../assets";
+import { Title } from "../ui/Title/Title";
 
 function SampleNextArrow(props) {
   const { onClick } = props;
@@ -92,7 +92,7 @@ const Testimonial = () => {
       className="w-full py-20 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center">
-        <Title title="WHAT CLIENTS SAY" des="Testimonial" />
+        <Title title1={"Testimonial"} title2={"Testimonial"} />
       </div>
       <div className="max-w-6xl mx-auto">
         {/* ================ Slider One ================== */}

@@ -9,9 +9,9 @@ import { navLinksdata } from "../../constants";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className="w-full h-[130px] py-5 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont">
+    <div className="w-full h-[130px] px-2 md:px-0 py-5 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont">
       <div className="flex items-center gap-">
-        <h2 className="bg-white text-lg lg:text-2xl uppercase px-2 py-3 text-black font-[700]">
+        <h2 className="bg-white text-lg lg:text-2xl uppercase px-1 md:px-1 py-2 md:py-3 text-black font-[700]">
           {" "}
           Rijwan
         </h2>

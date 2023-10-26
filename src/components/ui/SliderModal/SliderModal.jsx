@@ -102,7 +102,7 @@ const settings = {
           role="dialog"
           aria-modal="true"
         >
-          <div className="bg-gray-900 w-1/2 h-auto p-5 rounded-lg">
+          <div className="bg-[#202223] w-10/12 md:w-1/2 lg:w-[600px] h-auto p-5 rounded-lg">
           <Slider {...settings}>
               {
                  images.map(image=>(

@@ -15,16 +15,16 @@ module.exports = {
       },
       fontFamily: {
         bodyFont: ["Poppins", "sans-serif"],
-        titleFont: ["Montserrat", "sans-serif"],
+        titleFont: ["Montserrat"],
       },
       colors: {
         bodyColor: "#000000",
-        lightText: "#c4cfde",
+        lightText: "#757474",
         boxBg: "linear-gradient(#145deg, #1e2024, #000033)",
-        designColor: "#003FC7",
+        designColor: "#4D4D4D",
       },
       boxShadow: {
-        shadowOne: "1px 1px 13px #20232e,-1px -1px 33px #000033",
+        shadowOne: "1px 1px 13px #191b1c,-1px -1px 33px #3d3b3b",
       },
     },
   },
