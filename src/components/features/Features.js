@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Card from "./Card";
-import { featuresData } from "../../data/features";
 import { Title } from "../ui/Title/Title";
+import { featuresData } from "../../data/data";
+import Card from "./Card";
 
 const Features = () => {
   const itemsPerPage = 6;
@@ -19,7 +19,7 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="w-full py-16 border-b-[1px] border-b-black"
+      className="w-full py-16 border-b-[1px] border-b-black md:h-[1400px] xl:h-[1200px] md:relative"
     >
       <Title title1={"Features and Skills"} title2={"Features and Skills"} />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
@@ -27,7 +27,7 @@ const Features = () => {
           <Card item={item} key={item.id} />
         ))}
       </div>
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-4 md:absolute md:bottom-0 xl:bottom-10 md:right-[26%] lg:right-1/3">
         {Array.from({
           length: Math.ceil(featuresData.length / itemsPerPage),
         }).map((_, index) => (

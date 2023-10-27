@@ -1,4 +1,5 @@
 import React from "react";
+import { FaGlobe } from "react-icons/fa";
 
 const ResumeCard = ({ education }) => {
   const { name, title, type, result, des } = education;
@@ -13,16 +14,34 @@ const ResumeCard = ({ education }) => {
             <p className="text-sm mt-2 text-gray-400 group-hover:text-white duration-300">
               {title}
             </p>
+            <a
+              href={`${education?.link}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm mt-2 text-gray-400 group-hover:text-white duration-300 hover:text-blue-400"
+            >
+              <button className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
+                <FaGlobe />
+              </button>
+              {education?.link && education.link}
+            </a>
           </div>
-          <div className="space-y-3">
-            <p className="px-4 py-2 text-green-400 bg-black bg-opacity-25 rounded-lg flex justify-center items-center shadow shadow-green-300 text-sm font-medium">
+          <div className="space-y-2">
+            <p className="px-4 py-2 text-green-400 bg-black bg-opacity-25 rounded-lg flex justify-center items-center shadow-shadowOne text-sm font-medium">
               {type}
             </p>
-            <p className="px-4 py-2 text-blue-400 bg-black bg-opacity-25 rounded-lg flex justify-center items-center shadow shadow-blue-300 text-sm font-medium">
+            <p className="px-4 py-2 text-designColor bg-black bg-opacity-25 rounded-lg flex justify-center items-center shadow-shadowOne text-sm font-medium">
               {result}
             </p>
           </div>
         </div>
+        {education?.image && (
+          <img
+            className="rounded w-full h-full"
+            src={`${education.image}`}
+            alt="certificate"
+          />
+        )}
         <p className="text-sm md:text-base font-medium text-gray-400 group-hover:text-gray-300 duration-300">
           {des}
         </p>
