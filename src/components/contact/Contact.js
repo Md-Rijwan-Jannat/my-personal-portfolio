@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ContactLeft from "./ContactLeft";
 import { Title } from "../ui/Title/Title";
 import emailjs from "@emailjs/browser";
@@ -11,6 +11,8 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
+
+  const form = useRef();
 
   const emailValidation = () => {
     return String(email)
@@ -41,13 +43,14 @@ const Contact = () => {
         message: message,
         reply_to: email,
       };
+      console.log(emailData);
 
       // Use the emailjs.sendForm method to send the email
       emailjs
         .sendForm(
           "service_a83mwk4",
-          "template_sotaxch",
-          emailData,
+          "template_crw6xto",
+          form.current,
           "wTuP0_-qh1sVDIcjH"
         )
         .then(
@@ -82,7 +85,10 @@ const Contact = () => {
         <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
           <ContactLeft />
           <div className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#051320] to-[#0a0b0c] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
-            <form className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5">
+            <form
+              ref={form}
+              className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5"
+            >
               {errMsg && (
                 <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
                   {errMsg}
@@ -101,6 +107,7 @@ const Contact = () => {
                   <input
                     onChange={(e) => setUsername(e.target.value)}
                     value={username}
+                    name="from_name"
                     className={`${
                       errMsg === "Username is required!" && "outline-gray-800"
                     } bg-gray-900 p-3 rounded focus:outline-none focus:border-b-4 focus:border-gray-700`}
@@ -114,6 +121,7 @@ const Contact = () => {
                   <input
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     value={phoneNumber}
+                    name="phone"
                     className={`${
                       errMsg === "Phone number is required!" &&
                       "outline-gray-800"
@@ -129,6 +137,7 @@ const Contact = () => {
                 <input
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
+                  name="reply_to"
                   className={`${
                     errMsg === "Please give your Email!" && "outline-gray-800"
                   } bg-gray-900 p-3 rounded focus:outline-none focus:border-b-4 focus:border-gray-700`}
@@ -142,6 +151,7 @@ const Contact = () => {
                 <input
                   onChange={(e) => setSubject(e.target.value)}
                   value={subject}
+                  name="subject"
                   className={`${
                     errMsg === "Plese give your Subject!" && "outline-gray-800"
                   } bg-gray-900 p-3 rounded focus:outline-none focus:border-b-4 focus:border-gray-700`}
@@ -155,6 +165,7 @@ const Contact = () => {
                 <textarea
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
+                  name="message"
                   className={`${
                     errMsg === "Message is required!" && "outline-gray-800"
                   } bg-gray-900 p-3 rounded focus:outline-none focus:border-b-4 focus:border-gray-700`}
@@ -170,16 +181,6 @@ const Contact = () => {
                   Send Message
                 </button>
               </div>
-              {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
-                  {errMsg}
-                </p>
-              )}
-              {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
-                  {successMsg}
-                </p>
-              )}
             </form>
           </div>
         </div>
