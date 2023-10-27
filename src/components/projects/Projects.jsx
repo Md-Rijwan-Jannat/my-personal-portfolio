@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="w-full py-5 border-b-[1px] border-b-black"
+      className="w-full py-5 pt-10 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center">
         <Title title1={"My Projects"} title2={"My Projects"} />

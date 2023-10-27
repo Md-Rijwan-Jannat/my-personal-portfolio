@@ -1,8 +1,9 @@
 import homepage1 from "../assets/images/projects/SummerHome.png";
 import homepage2 from "../assets/images/projects/ToyHome.png";
 import homepage3 from "../assets/images/projects/AsupHome.png";
-import homepage4 from "../assets/images/projects/ShefHome.png";
-import homepage5 from "../assets/images/projects/AiSquadHome.png";
+import homepage4 from "../assets/images/projects/contactHome.png";
+import homepage5 from "../assets/images/projects/ShefHome.png";
+import homepage6 from "../assets/images/projects/AiSquadHome.png";
 import summer1 from "../assets/images/projects/summer1.png";
 import summer2 from "../assets/images/projects/summer2.png";
 import summer3 from "../assets/images/projects/summer3.png";
@@ -28,6 +29,10 @@ import Asup2 from "../assets/images/projects/Asop2.png";
 import Asup3 from "../assets/images/projects/Asop3.png";
 import Asup4 from "../assets/images/projects/Asop4.png";
 import Asup5 from "../assets/images/projects/Asop5.png";
+import Contact1 from "../assets/images/projects/contact1.png";
+import Contact2 from "../assets/images/projects/contact2.png";
+import Contact3 from "../assets/images/projects/contact3.png";
+import Contact4 from "../assets/images/projects/contact4.png";
 
 export const projects = [
   {
@@ -127,6 +132,34 @@ export const projects = [
     image: homepage4,
     images: [
       { id: 1, image: homepage4 },
+      { id: 2, image: Contact1 },
+      { id: 2, image: Contact2 },
+      { id: 2, image: Contact3 },
+      { id: 2, image: Contact4 },
+    ],
+    name: "Contact management",
+    details:
+      "This Chef Recipe project is a responsive web app with login functionality. It includes a banner section, a chefs section, and recipe details with a favorite button. The home page is fully responsive, and users can register and log in via email, password, or Google/GitHub.",
+    des1: "Visually appealing design showcasing culinary artistry, enhancing user engagement and appetite.",
+    des2: "Seamless navigation for recipes, chef profiles, and interactive cooking tutorials, optimizing user experience.",
+    des3: "Mobile-friendly layout, ensuring accessibility across devices for food enthusiasts on-the-go.",
+    link1: "https://github.com/Md-Rijwan-Jannat/popular-chef",
+    link2: "https://github.com/Md-Rijwan-Jannat/popular-chef-server",
+    link3: "https://the-chef-recipe.web.app/",
+    technology: [
+      { id: 1, name: "HTML" },
+      { id: 2, name: "React" },
+      { id: 3, name: "JavaScript" },
+      { id: 4, name: "Node.js" },
+      { id: 5, name: "Express" },
+      { id: 6, name: "MongoDB" },
+    ],
+  },
+  {
+    id: 5,
+    image: homepage5,
+    images: [
+      { id: 1, image: homepage5 },
       { id: 2, image: Chef1 },
       { id: 3, image: Chef2 },
       { id: 4, image: Chef3 },
@@ -152,9 +185,9 @@ export const projects = [
     ],
   },
   {
-    id: 5,
-    image: homepage5,
-    images: [{ id: 1, image: homepage5 }],
+    id: 6,
+    image: homepage6,
+    images: [{ id: 1, image: homepage6 }],
     name: "Ai work Squad",
     details: "",
     des1: "Develop a user-friendly interface that allows project managers to assign tasks to AI work squad members.",

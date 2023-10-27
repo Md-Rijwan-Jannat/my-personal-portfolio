@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "./Card";
-import { featuresData } from "../../data/data";
+import { featuresData } from "../../data/features";
 import { Title } from "../ui/Title/Title";
 
 const Features = () => {
@@ -19,7 +19,7 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="w-full py-20 border-b-[1px] border-b-black"
+      className="w-full py-16 border-b-[1px] border-b-black"
     >
       <Title title1={"Features and Skills"} title2={"Features and Skills"} />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
