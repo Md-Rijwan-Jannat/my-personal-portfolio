@@ -68,3 +68,128 @@
     transition-duration: 400ms;
     transition-property: width, left;
   }
+
+
+
+:root {
+    --shadowShift: 6px;
+    --shadowBlur: 15px;
+}
+
+.wave {
+  position: relative;
+  margin-left: 110px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wave__btn {
+  z-index: 100;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(241, 243, 246, 0);
+  transition: transform 0.2s ease-out;
+
+  box-shadow: var(--shadowShift) 0 var(--shadowBlur) rgba(55 84 170 / 0.2),
+    calc(var(--shadowShift) * -1) 0 var(--shadowBlur) rgba(255, 255, 255, 0);
+
+  /*     box-shadow: inset var(--shadowShift) 0 var(--shadowBlur) rgba(55 84 170 / 0.2),
+    var(--shadowShift) 0 var(--shadowBlur) rgba(55 84 170 / 0.2),
+    inset calc(var(--shadowShift) * -1) 0 var(--shadowBlur)
+      rgba(255 255 255 / 1),
+    calc(var(--shadowShift) * -1) 0 var(--shadowBlur) rgba(255 255 255 / 1); */
+}
+
+.wave__btn:hover {
+  cursor: pointer;
+}
+
+.wave__btn::before {
+  content: "CLICK";
+  color: #31373f;
+  font-weight: bold;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  transform: rotate(-45deg);
+}
+
+.wave__btn:focus {
+  outline: none;
+}
+
+.wave__btn:focus-visible {
+  border-color: #89aedf;
+}
+
+.wave__btn:active {
+  opacity: 0.7;
+  transform: rotate(45deg) scale(1);
+}
+
+.wave__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.wave__circle {
+  position: absolute;
+  background-color: transparent;
+  border: 10px solid var(--circleColor);
+  border-radius: 50%;
+  box-shadow: inset var(--shadowShift) var(--shadowShift) var(--shadowBlur)
+      rgba(55 84 170 / 0.2),
+    var(--shadowShift) var(--shadowShift) var(--shadowBlur)
+      rgba(55 84 170 / 0.2),
+    inset calc(var(--shadowShift) * -1) calc(var(--shadowShift) * -1)
+      var(--shadowBlur) #C0C0C0,
+    calc(var(--shadowShift) * -1) calc(var(--shadowShift) * -1)
+      var(--shadowBlur) #C0C0C0;
+  filter: blur(3px);
+
+  animation-name: ripple;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0, 0.2, 0.8, 1);
+  animation-iteration-count: infinite;
+}
+
+.wave__container .wave__circle:nth-child(2) {
+  animation-delay: -1s;
+}
+
+.wave__container .wave__circle:nth-child(3) {
+  animation-delay: -2s;
+}
+
+@keyframes ripple {
+  0% {
+    top: 250px;
+    left: 250px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}

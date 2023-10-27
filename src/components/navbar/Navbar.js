@@ -8,6 +8,8 @@ import { navLinksdata } from "../../constants";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [activeLink, setActiveLink] = useState(null);
+
   return (
     <div className="w-full h-[130px] px-2 md:px-0 py-5 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont">
       <div className="flex items-center gap-">
@@ -24,12 +26,15 @@ const Navbar = () => {
           {navLinksdata.map(({ _id, title, link }) => (
             <li className="link-btn" key={_id}>
               <Link
-                activeClass="border-t-4 border-white"
                 to={link}
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
+                onSetActive={() => setActiveLink(link)}
+                className={
+                  activeLink === link ? "active border-t-4 border-white" : ""
+                }
               >
                 {title}
               </Link>
@@ -48,9 +53,11 @@ const Navbar = () => {
               <div>
                 <img className="w-32" src={logo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Earum soluta perspiciatis molestias enim cum repellat, magnam
-                  exercitationem distinctio aliquid nam.
+                  A developer is a tech professional who writes code and creates
+                  software applications and websites. They use programming
+                  languages and tools to build, test, and maintain digital
+                  products. Developers play a crucial role in turning ideas into
+                  functional and user-friendly technology solutions.
                 </p>
               </div>
               <ul className="flex flex-col gap-4">
@@ -64,6 +71,8 @@ const Navbar = () => {
                       smooth={true}
                       offset={-70}
                       duration={500}
+                      onSetActive={() => setActiveLink(item.link)}
+                      className={activeLink === item.link ? "active" : ""}
                     >
                       {item.title}
                     </Link>

@@ -4,7 +4,7 @@ const Location = () => {
   return (
     <section
       id="location"
-      className="w-full py-20 border-b-[1px] border-b-black"
+      className="w-full py-5 pt-10 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center">
         <Title title1={"Location"} title2={"Location"} />
