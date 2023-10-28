@@ -82,7 +82,7 @@ const Contact = () => {
         <Title title1={"Contact me"} title2={"Contact me"} />
       </div>
       <div className="w-full">
-        <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
+        <div className="w-full h-auto flex flex-col lgl:flex-row gap-7 justify-between">
           <ContactLeft />
           <div className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#0b0a0a] to-[#080b0d] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
             <form

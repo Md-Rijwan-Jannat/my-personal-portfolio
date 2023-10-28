@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full h-[130px] px-2 md:px-0 py-5 lg:px-5 sticky top-0 z-50 mx-auto flex justify-between items-center font-titleFont ${navbarBackground}`}
+      className={`w-full h-[130px] px-2 py-5 lg:px-5 sticky top-0 z-50 mx-auto flex justify-between items-center font-titleFont ${navbarBackground}`}
       style={{
         transition: backgroundTransition,
       }}

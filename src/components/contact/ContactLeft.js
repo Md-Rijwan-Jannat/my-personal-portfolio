@@ -20,7 +20,7 @@ const ContactLeft = () => {
   const displayedText = showFullText ? text : text.slice(0, 200);
 
   return (
-    <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#0a0b0b] to-[#0b0e11] p-4 lgl:p-8 rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center">
+    <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#0f0f0f] to-[#050607] p-4 lgl:p-8 rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center">
       <div className="relative">
         <div>
           <img
