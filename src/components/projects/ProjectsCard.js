@@ -5,8 +5,7 @@ import GitHubDropdown from "../ui/GitHubDrop/GitHubDropdown";
 import SliderModal from "../ui/SliderModal/SliderModal";
 
 const ProjectsCard = ({ project, title, des, src }) => {
-  const { id, name, image, images, des1, des2, des3, link1, link2, link3 } =
-    project;
+  const { name, image, images, details, link1, link2, link3 } = project;
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -53,13 +52,7 @@ const ProjectsCard = ({ project, title, des, src }) => {
             </div>
           </div>
           <p className="text-sm tracking-wide mt-3 hover:text-gray-400 hover:text-decoration-300 duration-300">
-            {des1}
-          </p>
-          <p className="text-sm tracking-wide mt-3 hover:text-gray-400 hover:text-decoration-300 duration-300">
-            {des2}
-          </p>
-          <p className="text-sm tracking-wide mt-3 hover:text-gray-400 hover:text-decoration-300 duration-300">
-            {des3}
+            {details}
           </p>
         </div>
       </div>

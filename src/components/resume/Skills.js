@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { skillsData } from "../../data/skillsData";
 
+// ... (other imports)
+
 const Skills = () => {
   const [frontend, setFrontend] = useState([]);
   const [backend, setBackend] = useState([]);
@@ -12,7 +14,10 @@ const Skills = () => {
     setFrontend(frontendData);
     setBackend(backendData);
   }, []);
+  console.log(skillsData);
 
+  console.log(frontend);
+  console.log(backend);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -37,7 +42,8 @@ const Skills = () => {
                   initial={{ x: "-100%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
-                  className={`w-[${data.percent}] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative`}
+                  style={{ width: `${data.percent}` }}
+                  className={` h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative`}
                 >
                   <span className="absolute -top-7 right-0">
                     {data.percent}
@@ -67,7 +73,8 @@ const Skills = () => {
                   initial={{ x: "-100%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
-                  className={`w-[${data.percent}] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative`}
+                  style={{ width: `${data.percent}` }}
+                  className={`h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative`}
                 >
                   <span className="absolute -top-7 right-0">
                     {data.percent}
