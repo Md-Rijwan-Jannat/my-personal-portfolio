@@ -4,13 +4,20 @@ import homepage3 from "../assets/images/projects/AsupHome.png";
 import homepage4 from "../assets/images/projects/contactHome.png";
 import homepage5 from "../assets/images/projects/ShefHome.png";
 import homepage6 from "../assets/images/projects/AiSquadHome.png";
+import TwitterHome7 from "../assets/images/projects/TwitterHome.png";
 import summer1 from "../assets/images/projects/summer1.png";
 import summer2 from "../assets/images/projects/summer2.png";
 import summer3 from "../assets/images/projects/summer3.png";
 import summer4 from "../assets/images/projects/summer4.png";
 import summer5 from "../assets/images/projects/summer5.png";
-import summer6 from "../assets/images/projects/summer6.png";
-import summer7 from "../assets/images/projects/summer7.png";
+import summer10 from "../assets/images/projects/summer10.png";
+import summer11 from "../assets/images/projects/summer11.png";
+import summer12 from "../assets/images/projects/summer13.png";
+import summer13 from "../assets/images/projects/summer13.png";
+import summer14 from "../assets/images/projects/summer14.png";
+import summer15 from "../assets/images/projects/summer15.png";
+import summer16 from "../assets/images/projects/summer16.png";
+import summer17 from "../assets/images/projects/summer17.png";
 import Toy1 from "../assets/images/projects/Toy1.png";
 import Toy2 from "../assets/images/projects/Toy2.png";
 import Toy3 from "../assets/images/projects/Toy3.png";
@@ -18,6 +25,9 @@ import Toy4 from "../assets/images/projects/Toy4.png";
 import Toy5 from "../assets/images/projects/Toy5.png";
 import Toy6 from "../assets/images/projects/Toy6.png";
 import Toy7 from "../assets/images/projects/Toy7.png";
+import Toy8 from "../assets/images/projects/Toy8.png";
+import Toy9 from "../assets/images/projects/Toy9.png";
+import Toy10 from "../assets/images/projects/Toy10.png";
 import Chef1 from "../assets/images/projects/Chef1.png";
 import Chef2 from "../assets/images/projects/Chef2.png";
 import Chef3 from "../assets/images/projects/Chef3.png";
@@ -33,6 +43,15 @@ import Contact1 from "../assets/images/projects/contact1.png";
 import Contact2 from "../assets/images/projects/contact2.png";
 import Contact3 from "../assets/images/projects/contact3.png";
 import Contact4 from "../assets/images/projects/contact4.png";
+import Twitter1 from "../assets/images/projects/twitter1.png";
+import Twitter2 from "../assets/images/projects/twitter2.png";
+import Twitter3 from "../assets/images/projects/twitter3.png";
+import Twitter4 from "../assets/images/projects/twitter4.png";
+import Twitter5 from "../assets/images/projects/twitter5.png";
+import Twitter6 from "../assets/images/projects/twitter6.png";
+import Twitter7 from "../assets/images/projects/twitter7.png";
+import Twitter8 from "../assets/images/projects/twitter8.png";
+import Twitter9 from "../assets/images/projects/twitter9.png";
 
 export const projects = [
   {
@@ -45,8 +64,14 @@ export const projects = [
       { id: 4, image: summer3 },
       { id: 5, image: summer4 },
       { id: 6, image: summer5 },
-      { id: 7, image: summer6 },
-      { id: 8, image: summer7 },
+      { id: 8, image: summer10 },
+      { id: 8, image: summer11 },
+      { id: 8, image: summer12 },
+      { id: 8, image: summer13 },
+      { id: 8, image: summer14 },
+      { id: 8, image: summer15 },
+      { id: 8, image: summer16 },
+      { id: 8, image: summer17 },
     ],
     name: "summer sports school camp crouse",
     details:
@@ -69,6 +94,39 @@ export const projects = [
   },
   {
     id: 2,
+    image: TwitterHome7,
+    images: [
+      { id: 1, image: TwitterHome7 },
+      { id: 2, image: Twitter1 },
+      { id: 2, image: Twitter2 },
+      { id: 2, image: Twitter3 },
+      { id: 2, image: Twitter4 },
+      { id: 2, image: Twitter5 },
+      { id: 2, image: Twitter6 },
+      { id: 2, image: Twitter7 },
+      { id: 2, image: Twitter8 },
+      { id: 2, image: Twitter9 },
+    ],
+    name: "twitter clone",
+    details:
+      "The Twitter Clone project is a full-stack Next.js web application that replicates the core functionality of the popular social media platform, Twitter.The interface is designed to closely resemble the familiar Twitter layout, offering a seamless and intuitive user experience.",
+    des1: "The Twitter Clone is a full-stack web app replicating core features of the popular social media platform.",
+    des2: "Users have personalized profiles where they can customize their bio, profile picture, and cover photo.",
+    des3: "Built with modern web technologies, the Twitter Clone emphasizes responsiveness and accessibility.",
+    link1: "https://github.com/The-Time-llc/twitter-clone-project",
+    link2: "https://github.com/The-Time-llc/twitter-clone-project-server",
+    link3: "https://twitter-clone-project-phi.vercel.app/",
+    technology: [
+      { id: 1, name: "Next" },
+      { id: 2, name: "JavaScript" },
+      { id: 3, name: "Node.js" },
+      { id: 4, name: "Express" },
+      { id: 5, name: "MongoDB" },
+      { id: 6, name: "JWT" },
+    ],
+  },
+  {
+    id: 3,
     image: homepage2,
     images: [
       { id: 1, image: homepage2 },
@@ -79,6 +137,9 @@ export const projects = [
       { id: 6, image: Toy5 },
       { id: 7, image: Toy6 },
       { id: 8, image: Toy7 },
+      { id: 8, image: Toy8 },
+      { id: 8, image: Toy9 },
+      { id: 8, image: Toy10 },
     ],
     name: "sports cars toy",
     details:
@@ -99,7 +160,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     image: homepage3,
     images: [
       { id: 1, image: homepage3 },
@@ -129,7 +190,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     image: homepage4,
     images: [
       { id: 1, image: homepage4 },
@@ -157,7 +218,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     image: homepage5,
     images: [
       { id: 1, image: homepage5 },
@@ -188,7 +249,7 @@ export const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     image: homepage6,
     images: [{ id: 1, image: homepage6 }],
     name: "Ai work Squad",

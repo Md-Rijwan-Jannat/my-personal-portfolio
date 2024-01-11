@@ -20,6 +20,9 @@ const Skills = () => {
   console.log(backend);
   return (
     <motion.div
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1000"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
       className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"

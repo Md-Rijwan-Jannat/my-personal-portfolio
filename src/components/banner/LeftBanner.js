@@ -1,6 +1,13 @@
 import React from "react";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { useTypewriter, Cursor, Typewriter } from "react-simple-typewriter";
 import Media from "./Media";
+import resume from "../../assets/Resume/Fullstack developer.pdf";
+import {
+  AiFillFacebook,
+  AiFillGithub,
+  AiFillLinkedin,
+  AiOutlineDownload,
+} from "react-icons/ai";
 
 const LeftBanner = () => {
   const [text] = useTypewriter({
@@ -16,29 +23,133 @@ const LeftBanner = () => {
     delaySpeed: 2000,
   });
   return (
-    <div className="w-full lgl:w-1/2 flex flex-col gap-20 z-10">
-      <div className="flex flex-col gap-5">
-        <h1 className="text-3xl lg:text-5xl font-bold text-white">
-          Hi, I'm{" "}
-          <span className="text-designColor capitalize">Rijwan Jannat</span>
-        </h1>
-        <h2 className="text-xl lg:text-4xl font-bold text-white">
-          a <span>{text}</span>
-          <Cursor
-            cursorBlinking="false"
-            cursorStyle="|"
-            cursorColor="#C0C0C0"
-          />
-        </h2>
-        <p className="text-base font-bodyFont leading-6 tracking-wide">
-          As a MERN stack developer, I craft digital marvels with my code,
-          forging web experiences that inspire innovation. Persistence is my
-          compass, guiding me to shape the future. I code, I evolve, and with
-          each line, I paint on the canvas of endless possibilities. 🚀🎨💻
-        </p>
+    <div
+      className="w-full lgl:w-1/2 flex flex-col gap-20 z-10"
+      data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="800"
+    >
+      <div className="  w-full rounded-lg bg-cyan-100 bg-opacity-10">
+        <div className="max-w-[1300px] h-10 relative  border-b border-gray-600">
+          <span className="w-3 absolute  top-3 rounded-full left-4 h-3 bg-red-600"></span>
+          <span className="w-3 absolute  top-3 rounded-full left-8 h-3 bg-yellow-600"></span>
+          <span className="w-3 absolute  left-12 rounded-full h-3 top-3 bg-green-600"></span>
+        </div>
+        <div className="w-full px-4 py-4 flex flex-col items-center gap-4 justify-center">
+          <h1 className="md:text-xl text-sm font-semibold flex flex-col  text-center  w-full md:text-start">
+            <div className="text-xs text-start w-full md:text-sm font-semibold mb-4">
+              <span>{"<"}</span>
+              <span className="text-red-400">{"name"}</span>
+              <span className="pl-2 text-green-400">{"className"}</span>
+              <span className="text-white">{"="}</span>
+              <span className="text-yellow-400 ">{`
+            text-white text-lg`}</span>
+              <span>{">"}</span>
+              <br></br>
+              <span className="text-lg text-gray-500">MD Rijwan Jannat</span>
+              <br></br>
+              <span>{"</"}</span>
+              <span className="text-red-400">{"name"}</span>
+              <span>{">"}</span>
+            </div>
+            <div className="text-xs text-start md:text-sm font-semibold">
+              <span>{"<"}</span>
+              <span className="text-red-400">{"h1"}</span>
+              <span className="pl-2 text-green-400">{"className"}</span>
+              <span className="text-white">{"="}</span>
+              <span className="text-yellow-400 ">{`'text-xl font-semibold flex    w-full md:text-start'`}</span>
+              <span>{">"}</span>
+            </div>
+            <div className="flex">
+              <p className="text-gray-500"> Hello: I am</p>
+              <span className="text-cyan-400 px-2">{text}</span>
+            </div>
+            <div className="text-xs md:text-sm text-start font-semibold">
+              <span>{"</"}</span>
+              <span className="text-red-400">{"h1"}</span>
+
+              <span>{">"}</span>
+            </div>
+          </h1>
+          <p className="w-full text-start md:text-start text-xs  md:text-sm text-gray-300 font-semibold">
+            <div className="text-xs md:text-sm font-semibold">
+              <span>{"<"}</span>
+              <span className="text-red-400">{"objective"}</span>
+              <span className="pl-2 text-green-400">{"className"}</span>
+              <span className="text-white">{"="}</span>
+              <span className="text-yellow-400">{`'text-sm'`}</span>
+              <span>{">"}</span>
+            </div>
+            As a MERN stack developer, I craft digital marvels with my code,
+            forging web experiences that inspire innovation. Persistence is my
+            compass, guiding me to shape the future. I code, I evolve, and with
+            each line, I paint on the canvas of endless possibilities. 🚀🎨💻
+            <div className="text-xs md:text-sm font-semibold">
+              <span>{"</"}</span>
+              <span className="text-red-400">{"objective"}</span>
+
+              <span>{">"}</span>
+            </div>
+          </p>
+          <div className="hidden md:flex justify-start w-full items-center gap-2">
+            <div className="text-xs  md:text-sm font-semibold">
+              <span>{"<"}</span>
+              <span className="text-blue-400">{"SocialButtons"}</span>
+              <span className="pl-2 text-green-400">{"className"}</span>
+              <span className="text-white">{"="}</span>
+              <span className="text-yellow-400">{`'icons'`}</span>
+              <span>{">"}</span>
+            </div>
+            <div className="flex flex-col md:flex-row gap-4 md:gap-4 ">
+              <a href="https://www.linkedin.com/in/rijwan-jannat-01/">
+                <AiFillLinkedin className=" text-3xl md:text-2xl text-gray-200  hover:text-red-400 cursor-pointer" />
+              </a>
+              <a href="https://www.facebook.com/mdrijwanjannat">
+                <AiFillFacebook className="text-3xl md:text-2xl cursor-pointer text-gray-200  hover:text-red-400" />
+              </a>
+              <a href="https://github.com/Md-Rijwan-Jannat">
+                <AiFillGithub className="text-3xl md:text-2xl text-gray-200  hover:text-red-400 cursor-pointer" />{" "}
+              </a>
+            </div>
+            <div className="text-xs md:text-sm font-semibold">
+              <span>{"</"}</span>
+              <span className="text-blue-400">{"SocialButtons"}</span>
+
+              <span>{">"}</span>
+            </div>
+          </div>
+        </div>
+        <div className="flex pb-4 flex-col md:flex-row items-center">
+          <div className="text-xs flex justify-start md:justify-normal md:w-fit w-full md:text-sm  ml-4 font-semibold">
+            <span>{"<"}</span>
+            <span className="text-red-400">{"a"}</span>
+
+            <span className="pl-2 text-green-400">{"href"}</span>
+            <span className="text-white">{"="}</span>
+            <span className="text-yellow-400">{`'../rijwan jannat resume.pdf'`}</span>
+            <span className="pl-2 text-green-400">{"downlaod"}</span>
+
+            <span>{">"}</span>
+          </div>
+          <a
+            href={resume}
+            className="flex  justify-start md:justify-normal md:w-fit w-full ml-4 gap-6 md:gap-4 "
+            download
+          >
+            <span className="text-xs md:text-sm font-semibold w-fit flex animate-pulse items-center gap-2 py-2 cursor-pointer text-white">
+              <AiOutlineDownload className="font-semibold md:text-2xl" />
+              Download Resume
+            </span>
+          </a>
+          <div className="text-xs flex justify-start md:justify-normal md:w-fit w-full md:text-sm ml-4  font-semibold">
+            <span>{"</"}</span>
+            <span className="text-red-400">{"a"}</span>
+
+            <span>{">"}</span>
+          </div>
+        </div>
       </div>
-      {/* Media */}
-      <Media />
     </div>
   );
 };

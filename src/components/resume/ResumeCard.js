@@ -4,7 +4,12 @@ import { FaGlobe } from "react-icons/fa";
 const ResumeCard = ({ education }) => {
   const { name, title, type, result, des } = education;
   return (
-    <div className="w-full">
+    <div
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1000"
+      className="w-full"
+    >
       <div className="w-full bg-black bg-opacity-20 hover:bg-opacity-30 duration-300  rounded-lg p-4 lgl:px-10 flex flex-col justify-center gap-6 lgl:gap-10 shadow-shadowOne">
         <div className="flex flex-col lgl:flex-row justify-between gap-4 lgl:gap-0 lgl:items-center">
           <div>

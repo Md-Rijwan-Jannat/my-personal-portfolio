@@ -5,7 +5,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
-import profile from "../../assets/images/profile.jpg";
+import profile from "../../assets/images/profile.png";
 
 const ContactLeft = () => {
   const [showFullText, setShowFullText] = useState(false);
@@ -30,13 +30,13 @@ const ContactLeft = () => {
           />
         </div>
         <img
-          className="w-24 h-24 rounded-full object-cover ring-2 ring-gray-600 mb-2 absolute -bottom-7 left-3"
+          className="w-32 h-32 rounded-full object-cover ring-2 ring-gray-600 mb-2 absolute -bottom-7 left-3"
           src={profile}
           alt="contactImg"
         />
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div data-aos="fade-right" className="flex flex-col gap-4">
         <h3 className="text-3xl font-bold text-white">MD Rijwan Jannat</h3>
         <p className="text-lg font-normal text-gray-400">
           MERN Stack Developer
@@ -70,7 +70,7 @@ const ContactLeft = () => {
           <span className="text-lightText">rijwanjannat36@gmail.com</span>
         </p>
       </div>
-      <div className="flex flex-col gap-4">
+      <div data-aos="fade-right" className="flex flex-col gap-4">
         <h2 className="text-base uppercase font-titleFont mb-4">Find me in</h2>
         <div className="flex gap-4">
           <a
@@ -79,7 +79,7 @@ const ContactLeft = () => {
             href="https://www.facebook.com/profile.php?id=100086218014706"
             className="bannerIcon"
           >
-            <FaFacebookF />
+            <FaFacebookF className="text-designColor" />
           </a>
           <a
             target="_blank"
@@ -87,7 +87,7 @@ const ContactLeft = () => {
             href="https://www.instagram.com/rijwanjannat/"
             className="bannerIcon"
           >
-            <FaInstagram />
+            <FaInstagram className="text-designColor" />
           </a>
           <a
             target="_blank"
@@ -95,7 +95,7 @@ const ContactLeft = () => {
             href="https://www.instagram.com/rijwanjannat/"
             className="bannerIcon"
           >
-            <FaLinkedinIn />
+            <FaLinkedinIn className="text-designColor" />
           </a>
         </div>
       </div>

@@ -15,6 +15,8 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [activeLink, setActiveLink] = useState(null);
   const [navbarBackground, setNavbarBackground] = useState("transparent");
+  const [fadeRight, setFadeRight] = useState(false);
+
   const [backgroundTransition, setBackgroundTransition] =
     useState("background 0.4s");
 
@@ -47,7 +49,7 @@ const Navbar = () => {
           {" "}
           Rijwan
         </h2>
-        <h2 className="text-lg lg:text-2xl uppercase px-2 py-3 text-white font-[700]">
+        <h2 className="text-lg lg:text-2xl uppercase px-2 py-3 text-designColor font-[700]">
           Jannat
         </h2>
       </div>
@@ -63,7 +65,9 @@ const Navbar = () => {
                 duration={500}
                 onSetActive={() => setActiveLink(link)}
                 className={
-                  activeLink === link ? "active border-t-4 border-white" : ""
+                  activeLink === link
+                    ? "active border-t-4 border-designColor"
+                    : ""
                 }
               >
                 {title}
@@ -78,7 +82,10 @@ const Navbar = () => {
           <FiMenu />
         </span>
         {showMenu && (
-          <div className="w-[80%] h-screen overflow-scroll absolute top-0 left-0 bg-bodyColor p-4 scrollbar-hide">
+          <div
+            data-aos="fade-right"
+            className="w-[80%] h-screen overflow-scroll absolute top-0 left-0 bg-bodyColor p-4 scrollbar-hide"
+          >
             <div className="flex flex-col gap-8 py-2 relative">
               <div>
                 <img className="w-32" src={logo} alt="logo" />
@@ -117,7 +124,7 @@ const Navbar = () => {
                     href="https://www.facebook.com/profile.php?id=100086218014706"
                     className="bannerIcon"
                   >
-                    <FaFacebookF />
+                    <FaFacebookF className="text-designColor" />
                   </a>
                   <a
                     target="_blank"
@@ -125,7 +132,7 @@ const Navbar = () => {
                     href="https://www.instagram.com/rijwanjannat/"
                     className="bannerIcon"
                   >
-                    <FaInstagram />
+                    <FaInstagram className="text-designColor" />
                   </a>
                   <a
                     target="_blank"
@@ -133,12 +140,19 @@ const Navbar = () => {
                     href="https://www.instagram.com/rijwanjannat/"
                     className="bannerIcon"
                   >
-                    <FaLinkedinIn />
+                    <FaLinkedinIn className="text-designColor" />
                   </a>
                 </div>
               </div>
               <span
-                onClick={() => setShowMenu(false)}
+                data-aos="fade-right"
+                onClick={() => {
+                  setFadeRight(true);
+                  setTimeout(() => {
+                    setShowMenu(false);
+                    setFadeRight(false);
+                  }, 300); // Adjust the duration to match your CSS animation duration
+                }}
                 className="absolute top-4 right-4 text-gray-400 hover-text-designColor duration-300 text-2xl cursor-pointer"
               >
                 <MdClose />

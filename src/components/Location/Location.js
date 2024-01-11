@@ -9,7 +9,11 @@ const Location = () => {
       <div className="flex justify-center items-center text-center">
         <Title title1={"Location"} title2={"Location"} />
       </div>
-      <div className="w-full h-[300px] md:h-[400px]">
+      <div
+        className="w-full h-[300px] md:h-[400px]"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+      >
         <iframe
           className="w-full h-full md:h-[400px] rounded"
           title="Map Location"

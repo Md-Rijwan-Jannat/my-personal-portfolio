@@ -16,25 +16,28 @@ const ProjectsCard = ({ project, title, des, src }) => {
     setIsOpen(false);
   };
   return (
-    <div className="w-full p-4 xl:px-12 h-auto rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
+    <div
+      data-aos="fade-up"
+      className="w-full p-4 h-auto rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000"
+    >
       <div
         onClick={toggleModal}
         className="w-full h-60 bg-black bg-transparent overflow-hidden rounded-lg"
       >
         <img
-          className="w-full h-full object-cover group-hover:scale-110 duration-300 cursor-pointer rounded-lg"
+          className="w-full h-full object-fill group-hover:scale-110 duration-300 cursor-pointer rounded-lg"
           src={image}
           alt="home-page"
         />
       </div>
-      <div className="w-full mt-5 flex flex-col  gap-6">
+      <div className="w-full mt-5 flex flex-col gap-6">
         <div>
           <div className="flex items-center justify-between">
-            <h3 className="text-base uppercase text-designColor font-normal">
+            <h3 className="text-base uppercase text-cyan-100 font-normal">
               {name}
             </h3>
             <div className="flex gap-2">
-              <button className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
+              <button className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-cyan-100 text-designColor duration-300 cursor-pointer">
                 <GitHubDropdown
                   icon1={<BsGithub />}
                   icon2={<BsGithub />}
@@ -43,7 +46,7 @@ const ProjectsCard = ({ project, title, des, src }) => {
                   gitHubLink2={link2}
                 />
               </button>
-              <button className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
+              <button className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-designColor hover:text-cyan-100 duration-300 cursor-pointer">
                 <a href={`${link3}`} target="_blank" rel="noopener noreferrer">
                   {" "}
                   <FaGlobe />

@@ -5,7 +5,7 @@ const FooterBottom = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="w-full py-10">
+    <div className="w-full pb-10">
       <p className="text-center text-gray-500 text-base">
         © {currentYear} All rights reserved by Md Rijwan Jannat
       </p>
