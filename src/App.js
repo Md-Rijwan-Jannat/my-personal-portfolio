@@ -7,9 +7,9 @@ import Footer from "./components/footer/Footer";
 import FooterBottom from "./components/footer/FooterBottom";
 import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
-import Resume from "./components/resume/Resume";
 import Location from "./components/Location/Location";
 import { LoadingSpinner } from "./components/ui/LoadingSpinner/LoadingSpinner";
+import About from "./components/About/About";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,7 +34,7 @@ function App() {
           <Banner />
           <Features />
           <Projects />
-          <Resume />
+          <About />
           <Location />
           <Contact />
           <Footer />

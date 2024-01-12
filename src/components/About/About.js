@@ -7,9 +7,9 @@ import { Title } from "../ui/Title/Title";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
-const Resume = () => {
+const About = () => {
   return (
-    <section id="resume">
+    <section id="about">
       <div className="flex justify-center pt-16 items-center text-center">
         <Title title1={"About"} title2={"About"}></Title>
       </div>
@@ -50,4 +50,4 @@ const Resume = () => {
   );
 };
 
-export default Resume;
+export default About;
