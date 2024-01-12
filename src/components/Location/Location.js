@@ -10,7 +10,7 @@ const Location = () => {
         <Title title1={"Location"} title2={"Location"} />
       </div>
       <div
-        className="w-full h-[300px] md:h-[400px]"
+        className="w-full h-[300px] md:h-[400px] overflow-x-hidden"
         data-aos="fade-up"
         data-aos-anchor-placement="top-center"
       >

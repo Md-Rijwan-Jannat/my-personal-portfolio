@@ -82,7 +82,7 @@ const Contact = () => {
         <Title title1={"Contact me"} title2={"Contact me"} />
       </div>
       <div
-        className="w-full"
+        className="w-full overflow-x-hidden"
         data-aos="fade-up"
         data-aos-anchor-placement="top-center"
       >

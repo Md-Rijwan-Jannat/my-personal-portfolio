@@ -24,13 +24,13 @@ const LeftBanner = () => {
   });
   return (
     <div
-      className="w-full lgl:w-1/2 flex flex-col gap-20 z-10"
+      className="w-full lgl:w-1/2 flex flex-col gap-20 z-10 overflow-x-hidden"
       data-aos="fade-left"
       data-aos-anchor="#example-anchor"
       data-aos-offset="500"
       data-aos-duration="800"
     >
-      <div className="  w-full rounded-lg bg-cyan-100 bg-opacity-10">
+      <div className=" w-full rounded-lg bg-cyan-100 bg-opacity-10">
         <div className="max-w-[1300px] h-10 relative  border-b border-gray-600">
           <span className="w-3 absolute  top-3 rounded-full left-4 h-3 bg-red-600"></span>
           <span className="w-3 absolute  top-3 rounded-full left-8 h-3 bg-yellow-600"></span>

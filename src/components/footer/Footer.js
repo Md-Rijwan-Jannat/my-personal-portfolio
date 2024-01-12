@@ -12,7 +12,7 @@ const Footer = () => {
       data-aos="fade-down"
       data-aos-easing="linear"
       data-aos-duration="500"
-      className="w-full py-20 h-auto border-b-[1px] border-b-black grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-4 gap-8"
+      className="w-full overflow-x-hidden py-20 h-auto border-b-[1px] border-b-black grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-4 gap-8"
     >
       <div className="w-full h-full flex flex-col gap-8">
         <div className="flex items-center gap-">

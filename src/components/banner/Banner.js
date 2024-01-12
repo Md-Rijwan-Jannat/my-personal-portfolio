@@ -7,7 +7,7 @@ const Banner = () => {
   const videoUrl = bannerVideos;
 
   return (
-    <section id="home" className="">
+    <section id="home" className="w-full">
       {/* Create a div for the video background */}
       <div
         className=""
