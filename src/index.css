@@ -73,32 +73,79 @@
 
 /* Loader */
 .loader {
-  width: 48px;
+  width: 96px;
   height: 48px;
-  border: 2px solid #fff;
-  border-radius: 50%;
   display: inline-block;
   position: relative;
+  background: #fff;
+  border-radius: 48px 48px 0 0;
   box-sizing: border-box;
-  animation: rotation 1s linear infinite;
+  overflow: hidden;
 }
 .loader::after {
   content: "";
   box-sizing: border-box;
   position: absolute;
+  width: 24px;
+  height: 12px;
+  border-radius: 24px 24px 0 0;
+  background: #d51010;
   left: 50%;
-  top: 0;
-  background: #ca151e;
-  width: 3px;
-  height: 24px;
   transform: translateX(-50%);
+  bottom: 0;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 32px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  background: #d51010;
+  transform-origin: 50% 100%;
+  box-sizing: border-box;
+  animation: animloader 2s linear infinite alternate;
 }
 
-@keyframes rotation {
+@keyframes animloader {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(-70deg);
   }
-  100% {
-    transform: rotate(360deg);
+  10% {
+    transform: rotate(-40deg);
+  }
+  20%,
+  45%,
+  35% {
+    transform: rotate(-10deg);
+  }
+  40%,
+  30% {
+    transform: rotate(-30deg);
+  }
+  50%,
+  60% {
+    transform: rotate(20deg);
+  }
+  55%,
+  65%,
+  75% {
+    transform: rotate(40deg);
+  }
+  70% {
+    transform: rotate(45deg);
+  }
+  85%,
+  90% {
+    transform: rotate(50deg);
+  }
+  95% {
+    transform: rotate(75deg);
+  }
+  100%,
+  93% {
+    transform: rotate(70deg);
   }
 }

@@ -1,5 +1,9 @@
 import React from "react";
 
 export const LoadingSpinner = () => {
-  return <span class="loader"></span>;
+  return (
+    <div className="w-full h-screen flex items-center justify-center">
+      <span class="loader"></span>
+    </div>
+  );
 };
