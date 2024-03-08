@@ -4,9 +4,10 @@ import { HiArrowRight } from "react-icons/hi";
 const Card = ({ item: { title, des, icon } }) => {
   return (
     <div
-      data-aos="fade-down"
+      data-aos="fade-up"
+      data-aos-once="true"
       data-aos-easing="linear"
-      data-aos-duration="1000"
+      data-aos-duration="900"
       className="w-full px-12 h-80 py-10 rounded-lg shadow-shadowOne flex items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-black hover:to-[#1e2024] transition-colors duration-100 group"
     >
       <div className="h-72 overflow-y-hidden">

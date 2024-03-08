@@ -21,6 +21,7 @@ const Skills = () => {
   return (
     <motion.div
       data-aos="fade-down"
+      data-aos-once="true"
       data-aos-easing="linear"
       data-aos-duration="1000"
       initial={{ opacity: 0 }}

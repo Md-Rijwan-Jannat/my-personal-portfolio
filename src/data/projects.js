@@ -4,7 +4,8 @@ import homepage3 from "../assets/images/projects/AsupHome.png";
 import homepage4 from "../assets/images/projects/contactHome.png";
 import homepage5 from "../assets/images/projects/ShefHome.png";
 import homepage6 from "../assets/images/projects/AiSquadHome.png";
-import TwitterHome7 from "../assets/images/projects/TwitterHome.png";
+import homepage7 from "../assets/images/projects/TwitterHome.png";
+import homepage8 from "../assets/images/projects/tec-zone1.png";
 import summer1 from "../assets/images/projects/summer1.png";
 import summer2 from "../assets/images/projects/summer2.png";
 import summer3 from "../assets/images/projects/summer3.png";
@@ -52,6 +53,17 @@ import Twitter6 from "../assets/images/projects/twitter6.png";
 import Twitter7 from "../assets/images/projects/twitter7.png";
 import Twitter8 from "../assets/images/projects/twitter8.png";
 import Twitter9 from "../assets/images/projects/twitter9.png";
+import Tec1 from "../assets/images/projects/tec-zone1.png";
+import Tec2 from "../assets/images/projects/tec-zone2.png";
+import Tec3 from "../assets/images/projects/tec-zone3.png";
+import Tec4 from "../assets/images/projects/tec-zone4.png";
+import Tec5 from "../assets/images/projects/tec-zone5.png";
+import Tec6 from "../assets/images/projects/tec-zone6.png";
+import Tec7 from "../assets/images/projects/tec-zone7.png";
+import Tec8 from "../assets/images/projects/tec-zone8.png";
+import Tec9 from "../assets/images/projects/tec-zone9.png";
+import Tec10 from "../assets/images/projects/tec-zone10.png";
+import Tec11 from "../assets/images/projects/tec-zone11.png";
 
 export const projects = [
   {
@@ -92,20 +104,21 @@ export const projects = [
       { id: 6, name: "JWT" },
     ],
   },
+  // twitter
   {
     id: 2,
-    image: TwitterHome7,
+    image: homepage7,
     images: [
-      { id: 1, image: TwitterHome7 },
+      { id: 1, image: homepage7 },
       { id: 2, image: Twitter1 },
-      { id: 2, image: Twitter2 },
-      { id: 2, image: Twitter3 },
-      { id: 2, image: Twitter4 },
-      { id: 2, image: Twitter5 },
-      { id: 2, image: Twitter6 },
-      { id: 2, image: Twitter7 },
-      { id: 2, image: Twitter8 },
-      { id: 2, image: Twitter9 },
+      { id: 3, image: Twitter2 },
+      { id: 4, image: Twitter3 },
+      { id: 5, image: Twitter4 },
+      { id: 6, image: Twitter5 },
+      { id: 7, image: Twitter6 },
+      { id: 8, image: Twitter7 },
+      { id: 9, image: Twitter8 },
+      { id: 10, image: Twitter9 },
     ],
     name: "twitter clone",
     details:
@@ -125,8 +138,43 @@ export const projects = [
       { id: 6, name: "JWT" },
     ],
   },
+  // tec zone
   {
     id: 3,
+    image: homepage8,
+    images: [
+      { id: 1, image: homepage8 },
+      { id: 2, image: Tec1 },
+      { id: 3, image: Tec2 },
+      { id: 4, image: Tec3 },
+      { id: 5, image: Tec4 },
+      { id: 6, image: Tec6 },
+      { id: 7, image: Tec7 },
+      { id: 8, image: Tec8 },
+      { id: 9, image: Tec9 },
+      { id: 10, image: Tec10 },
+      { id: 11, image: Tec11 },
+    ],
+    name: "Tec Zone",
+    details:
+      "Tec Zone is a responsive Next.js web application developed using TypeScript and Redux. It features a modern and intuitive interface designed to provide users with an enhanced browsing experience. The project emphasizes responsiveness and accessibility, ensuring seamless functionality across various devices. Users can expect personalized profiles where they can customize their bio, profile picture, and cover photo",
+    des1: "Tec Zone is a responsive Next.js web application developed with TypeScript and Redux.",
+    des2: "The interface is designed to provide users with an intuitive browsing experience.",
+    des3: "Emphasizes responsiveness and accessibility for seamless functionality across devices.",
+    link1: "https://github.com/Md-Rijwan-Jannat/Tec-Zone.",
+    link2: "https://github.com/Md-Rijwan-Jannat/Tec-Zone.",
+    link3: "https://tec-zone.vercel.app/",
+    technology: [
+      { id: 1, name: "Next" },
+      { id: 2, name: "JavaScript" },
+      { id: 3, name: "Node.js" },
+      { id: 4, name: "Express" },
+      { id: 5, name: "MongoDB" },
+      { id: 6, name: "JWT" },
+    ],
+  },
+  {
+    id: 4,
     image: homepage2,
     images: [
       { id: 1, image: homepage2 },
@@ -160,7 +208,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     image: homepage3,
     images: [
       { id: 1, image: homepage3 },
@@ -190,7 +238,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     image: homepage4,
     images: [
       { id: 1, image: homepage4 },
@@ -218,7 +266,7 @@ export const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     image: homepage5,
     images: [
       { id: 1, image: homepage5 },
@@ -249,7 +297,7 @@ export const projects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     image: homepage6,
     images: [{ id: 1, image: homepage6 }],
     name: "Ai work Squad",

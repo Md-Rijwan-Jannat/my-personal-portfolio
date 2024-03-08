@@ -16,6 +16,7 @@ const About = () => {
       <Tabs
         data-aos="fade-up"
         data-aos-anchor-placement="top-center"
+        data-aos-once="true"
         className={"overflow-x-hidden w-full"}
       >
         <TabList className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">

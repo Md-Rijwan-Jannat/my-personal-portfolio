@@ -18,6 +18,9 @@ const ProjectsCard = ({ project, title, des, src }) => {
   return (
     <div
       data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-easing="linear"
+      data-aos-duration="900"
       className="w-full overflow-x-hidden p-4 h-auto rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000"
     >
       <div

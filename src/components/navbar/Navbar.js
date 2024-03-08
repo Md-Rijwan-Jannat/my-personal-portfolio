@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full h-[130px] px-2 py-5 lg:px-5 sticky top-0 z-50 mx-auto flex justify-between items-center font-titleFont ${navbarBackground}`}
+      className={`w-full h-[130px] py-5 px-3 sticky top-0 z-50 mx-auto flex justify-between items-center font-titleFont ${navbarBackground}`}
       style={{
         transition: backgroundTransition,
       }}
@@ -84,6 +84,7 @@ const Navbar = () => {
         {showMenu && (
           <div
             data-aos="fade-right"
+            data-aos-once="true"
             className="w-[80%] h-screen overflow-scroll absolute top-0 left-0 bg-bodyColor p-4 scrollbar-hide"
           >
             <div className="flex flex-col gap-8 py-2 relative">

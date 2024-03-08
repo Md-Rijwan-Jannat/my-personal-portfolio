@@ -6,6 +6,7 @@ const ResumeCard = ({ education }) => {
   return (
     <div
       data-aos="fade-down"
+      data-aos-once="true"
       data-aos-easing="linear"
       data-aos-duration="1000"
       className="w-full overflow-x-hidden"

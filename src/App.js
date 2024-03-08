@@ -29,16 +29,18 @@ function App() {
       {isLoading ? (
         <LoadingSpinner></LoadingSpinner>
       ) : (
-        <div className="max-w-screen-xl mx-auto px-3">
+        <div className="max-w-screen-xl mx-auto">
           <Navbar />
-          <Banner />
-          <Features />
-          <Projects />
-          <About />
-          <Location />
-          <Contact />
-          <Footer />
-          <FooterBottom />
+          <div className="px-3">
+            <Banner />
+            <Features />
+            <Projects />
+            <About />
+            <Location />
+            <Contact />
+            <Footer />
+            <FooterBottom />
+          </div>
         </div>
       )}
     </div>

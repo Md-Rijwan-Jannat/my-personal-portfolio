@@ -26,6 +26,7 @@ const LeftBanner = () => {
     <div
       className="w-full lgl:w-1/2 flex flex-col gap-20 z-10 overflow-x-hidden"
       data-aos="fade-left"
+      data-aos-once="true"
       data-aos-anchor="#example-anchor"
       data-aos-offset="500"
       data-aos-duration="800"

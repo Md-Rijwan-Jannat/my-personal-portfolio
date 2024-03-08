@@ -12,6 +12,7 @@ const Location = () => {
       <div
         className="w-full h-[300px] md:h-[400px] overflow-x-hidden"
         data-aos="fade-up"
+        data-aos-once="true"
         data-aos-anchor-placement="top-center"
       >
         <iframe

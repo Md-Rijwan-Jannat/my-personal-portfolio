@@ -84,12 +84,14 @@ const Contact = () => {
       <div
         className="w-full overflow-x-hidden"
         data-aos="fade-up"
+        data-aos-once="true"
         data-aos-anchor-placement="top-center"
       >
         <div className="w-full h-auto flex flex-col lgl:flex-row gap-7 justify-between">
           <ContactLeft />
           <div
             data-aos="fade-left"
+            data-aos-once="true"
             className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#0b0a0a] to-[#080b0d] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne"
           >
             <form
