@@ -8,7 +8,7 @@ export const Title = ({ title1, title2 }) => {
       </h1>
       <div className="absolute -bottom-4 w-full">
         <h1
-          className="text-[#4D4D4D] text-opacity-95 text-[30px] lg:text-[65px] font-[800] btn-shine"
+          className="text-[#4D4D4D] text-opacity-95 text-[25px] lg:text-[65px] font-[800] btn-shine"
           target="_blank"
         >
           {" "}

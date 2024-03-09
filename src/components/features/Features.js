@@ -27,19 +27,25 @@ const Features = () => {
           <Card item={item} key={item.id} />
         ))}
       </div>
-      <div className="flex justify-center mt-4 md:absolute md:bottom-0 xl:bottom-10 md:right-[26%] lg:right-1/3">
+      <div className="flex justify-center mt-4">
         {Array.from({
           length: Math.ceil(featuresData.length / itemsPerPage),
         }).map((_, index) => (
-          <button
+          <div
+            className="flex items-center justify-center w-[100px] gap-3 md:gap-5"
             key={index}
             onClick={() => handlePageChange(index + 1)}
-            className={`mx-2 p-2 cursor-pointer mt-10 ${
-              currentPage === index + 1 ? "text-blue-500" : "text-white"
-            }`}
           >
-            {index + 1}
-          </button>
+            <button
+              className={`w-10 h-10 cursor-pointer mt-10 rounded-full bg-[#22222f] ${
+                currentPage === index + 1
+                  ? "text-[#A24E20] font-bold ring-2 ring-[#a24e20]"
+                  : "text-gray-100"
+              }`}
+            >
+              {index + 1}
+            </button>
+          </div>
         ))}
       </div>
     </section>

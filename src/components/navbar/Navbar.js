@@ -85,15 +85,17 @@ const Navbar = () => {
           <div
             data-aos="fade-right"
             data-aos-once="true"
-            className="w-[80%] h-screen overflow-scroll absolute top-0 left-0 bg-bodyColor p-4 scrollbar-hide"
+            className="w-[80%] h-screen overflow-scroll absolute top-4 left-0 bg-bodyColor p-4 scrollbar-hide"
           >
             <div className="flex flex-col gap-8 py-2 relative">
-              <div>
-                <img className="w-32" src={logo} alt="logo" />
-                <p className="text-sm text-gray-400 mt-2">
-                  A developer is a tech professional who writes code and creates
-                  software applications and websites.
-                </p>
+              <div className="flex items-center gap-">
+                <h2 className="bg-white text-lg lg:text-2xl uppercase px-1 md:px-1 py-2 md:py-3 text-black font-[700]">
+                  {" "}
+                  Rijwan
+                </h2>
+                <h2 className="text-lg lg:text-2xl uppercase px-2 py-3 text-designColor font-[700]">
+                  Jannat
+                </h2>
               </div>
               <ul className="flex flex-col gap-4">
                 {navLinksdata.map((item) => (
@@ -107,7 +109,11 @@ const Navbar = () => {
                       offset={-70}
                       duration={500}
                       onSetActive={() => setActiveLink(item.link)}
-                      className={activeLink === item.link ? "active" : ""}
+                      className={
+                        activeLink === item.link
+                          ? "active border-t-2 border-designColor"
+                          : ""
+                      }
                     >
                       {item.title}
                     </Link>

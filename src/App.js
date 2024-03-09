@@ -18,7 +18,7 @@ function App() {
     // Simulate loading delay
     const delay = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 5000);
 
     // Clear the timeout on unmount
     return () => clearTimeout(delay);

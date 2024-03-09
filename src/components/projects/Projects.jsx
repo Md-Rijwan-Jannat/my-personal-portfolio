@@ -40,7 +40,7 @@ const Projects = () => {
       <div className="flex justify-center mt-8">
         {currentPage > 1 && (
           <button
-            className="mr-4 bg-blue-500 text-white px-4 py-2 rounded-md"
+            className="bg-[#22222f] text-designColor px-4 py-2 rounded-md ring-2 ring-designColor mr-2"
             onClick={handleLoadLess}
           >
             Back
@@ -48,7 +48,7 @@ const Projects = () => {
         )}
         {currentPage < totalPages && (
           <button
-            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+            className="bg-[#22222f] text-designColor px-4 py-2 rounded-md ring-2 ring-designColor"
             onClick={handleLoadMore}
           >
             Load More
