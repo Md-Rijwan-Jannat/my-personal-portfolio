@@ -2,14 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-} from "react-icons/fa";
 import { logo } from "../../assets/index";
 import { navLinksdata } from "../../constants";
+import Links from "../SocialMedia/Links";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -97,9 +92,12 @@ const Navbar = () => {
                   Jannat
                 </h2>
               </div>
-              <ul className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-4 items-center justify-center">
                 {navLinksdata.map((item) => (
-                  <li key={item._id} className="link-btn">
+                  <li
+                    key={item._id}
+                    className="link-btn w-[90px] text-center mb-3"
+                  >
                     <Link
                       onClick={() => setShowMenu(false)}
                       activeClass="active"
@@ -120,36 +118,11 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 items-center justify-center">
                 <h2 className="text-base uppercase font-titleFont mb-4">
                   Find me in
                 </h2>
-                <div className="flex gap-4">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.facebook.com/profile.php?id=100086218014706"
-                    className="bannerIcon"
-                  >
-                    <FaFacebookF className="text-designColor" />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/rijwanjannat/"
-                    className="bannerIcon"
-                  >
-                    <FaInstagram className="text-designColor" />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/rijwanjannat/"
-                    className="bannerIcon"
-                  >
-                    <FaLinkedinIn className="text-designColor" />
-                  </a>
-                </div>
+                <Links />
               </div>
               <span
                 data-aos="fade-right"

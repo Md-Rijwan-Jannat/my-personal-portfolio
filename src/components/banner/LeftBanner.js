@@ -103,7 +103,7 @@ const LeftBanner = () => {
               <span>{">"}</span>
             </div>
             <div className="flex flex-col md:flex-row gap-4 md:gap-4 ">
-              <a href="https://www.linkedin.com/in/rijwan-jannat-01/">
+              <a href="https://www.linkedin.com/in/md-rijwan-developer-3353362ba?trk=contact-info">
                 <AiFillLinkedin className=" text-3xl md:text-2xl text-gray-200  hover:text-red-400 cursor-pointer" />
               </a>
               <a href="https://www.facebook.com/mdrijwanjannat">

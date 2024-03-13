@@ -111,11 +111,3 @@
     background-position: 200% 0;
   }
 }
-
-/* Use media queries for responsiveness */
-@media (max-width: 768px) {
-  .div {
-    width: 500px; /* Adjust width for smaller screens */
-    left: 10%;
-  }
-}

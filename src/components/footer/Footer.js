@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+import Links from "../SocialMedia/Links";
 
 const Footer = () => {
   return (
@@ -28,32 +29,7 @@ const Footer = () => {
             Jannat
           </h2>
         </div>
-        <div data-aos="fade-right" data-aos-once="true" className="flex gap-4">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.facebook.com/profile.php?id=100086218014706"
-            className="bannerIcon"
-          >
-            <FaFacebookF className="text-designColor" />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.instagram.com/rijwanjannat/"
-            className="bannerIcon"
-          >
-            <FaInstagram className="text-designColor" />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.instagram.com/rijwanjannat/"
-            className="bannerIcon"
-          >
-            <FaLinkedinIn className="text-designColor" />
-          </a>
-        </div>
+        <Links />
       </div>
       <div className="w-full h-full">
         <h3 className="text-xl uppercase text-designColor tracking-wider">
