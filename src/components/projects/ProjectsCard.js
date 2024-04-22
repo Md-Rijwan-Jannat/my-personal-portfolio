@@ -5,9 +5,11 @@ import GitHubDropdown from "../ui/GitHubDrop/GitHubDropdown";
 import SliderModal from "../ui/SliderModal/SliderModal";
 
 const ProjectsCard = ({ project, title, des, src }) => {
-  const { name, image, images, details, link1, link2, link3 } = project;
+  const { name, image, images, details, link1, link2, link3, technology } =
+    project;
 
   const [isOpen, setIsOpen] = useState(false);
+  const [showFullDetails, setShowFullDetails] = useState(false);
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
@@ -15,6 +17,24 @@ const ProjectsCard = ({ project, title, des, src }) => {
   const closeToggleModal = () => {
     setIsOpen(false);
   };
+
+  const toggleShowFullDetails = () => {
+    setShowFullDetails(!showFullDetails);
+  };
+
+  const truncatedDetails = details.slice(0, 110);
+
+  // Predefined colors for technology items
+  const technologyColors = [
+    "#FF5733", // Red
+    "#FFBD33", // Yellow
+    "#33FF57", // Green
+    "#3366FF", // Blue
+    "#B233FF", // Purple
+    "#FF33FF", // Pink
+    "#33FFFF", // Cyan
+  ];
+
   return (
     <div
       data-aos="fade-up"
@@ -58,7 +78,15 @@ const ProjectsCard = ({ project, title, des, src }) => {
             </div>
           </div>
           <p className="text-sm tracking-wide mt-3 hover:text-gray-400 hover:text-decoration-300 duration-300">
-            {details}
+            {showFullDetails ? details : truncatedDetails}{" "}
+            {details.length > 110 && (
+              <span
+                className="text-cyan-100 cursor-pointer"
+                onClick={toggleShowFullDetails}
+              >
+                {showFullDetails ? " See Less" : " See More"}
+              </span>
+            )}
           </p>
         </div>
       </div>
@@ -67,6 +95,17 @@ const ProjectsCard = ({ project, title, des, src }) => {
         isOpen={isOpen}
         closeToggleModal={closeToggleModal}
       />
+      <div className="mt-5 flex flex-wrap gap-3 md:gap-5">
+        {technology.map((item, index) => (
+          <div
+            className=""
+            key={index}
+            style={{ color: technologyColors[index % technologyColors.length] }} // Assign colors from the predefined list
+          >
+            {"#" + item.name}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

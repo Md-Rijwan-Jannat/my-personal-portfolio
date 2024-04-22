@@ -130,7 +130,7 @@ export const projects = [
     link2: "https://github.com/The-Time-llc/twitter-clone-project-server",
     link3: "https://twitter-clone-project-phi.vercel.app/",
     technology: [
-      { id: 1, name: "Next" },
+      { id: 1, name: "Next.js" },
       { id: 2, name: "JavaScript" },
       { id: 3, name: "Node.js" },
       { id: 4, name: "Express" },
@@ -165,8 +165,8 @@ export const projects = [
     link2: "https://github.com/Md-Rijwan-Jannat/Tec-Zone.",
     link3: "https://tec-zone.vercel.app/",
     technology: [
-      { id: 1, name: "Next" },
-      { id: 2, name: "JavaScript" },
+      { id: 1, name: "Next.js" },
+      { id: 2, name: "Typescript" },
       { id: 3, name: "Node.js" },
       { id: 4, name: "Express" },
       { id: 5, name: "MongoDB" },
@@ -199,12 +199,11 @@ export const projects = [
     link2: "https://github.com/Md-Rijwan-Jannat/Toys-marketplase-server",
     link3: "https://toys-marketplace-386bc.web.app/",
     technology: [
-      { id: 1, name: "HTML" },
-      { id: 2, name: "React" },
-      { id: 3, name: "JavaScript" },
-      { id: 4, name: "Node.js" },
-      { id: 5, name: "Express" },
-      { id: 6, name: "MongoDB" },
+      { id: 1, name: "React" },
+      { id: 2, name: "JavaScript" },
+      { id: 3, name: "Node.js" },
+      { id: 4, name: "Express" },
+      { id: 5, name: "MongoDB" },
     ],
   },
   {

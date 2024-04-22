@@ -15,23 +15,26 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading delay
-    const delay = setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-
-    // Clear the timeout on unmount
-    return () => clearTimeout(delay);
+    // Wait for the window to load
+    window.onload = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
+    };
   }, []);
 
   return (
-    <div className="w-full h-auto bg-bodyColor text-lightText">
+    <div
+      className={`w-full h-auto bg-bodyColor text-lightText ${
+        isLoading ? "overflow-hidden" : ""
+      }`}
+    >
       {isLoading ? (
-        <LoadingSpinner></LoadingSpinner>
+        <LoadingSpinner />
       ) : (
-        <div className="max-w-screen-xl mx-auto">
+        <>
           <Navbar />
-          <div className="px-3">
+          <div className="max-w-screen-xl mx-auto px-3">
             <Banner />
             <Features />
             <Projects />
@@ -41,7 +44,7 @@ function App() {
             <Footer />
             <FooterBottom />
           </div>
-        </div>
+        </>
       )}
     </div>
   );

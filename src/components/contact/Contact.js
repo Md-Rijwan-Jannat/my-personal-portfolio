@@ -23,15 +23,11 @@ const Contact = () => {
   const handleSend = (e) => {
     e.preventDefault();
     if (username === "") {
-      setErrMsg("Username is required!");
-    } else if (phoneNumber === "") {
-      setErrMsg("Phone number is required!");
+      setErrMsg("Name is required!");
     } else if (email === "") {
       setErrMsg("Please give your Email!");
     } else if (!emailValidation(email)) {
       setErrMsg("Give a valid Email!");
-    } else if (subject === "") {
-      setErrMsg("Please give your Subject!");
     } else if (message === "") {
       setErrMsg("Message is required!");
     } else {
@@ -79,7 +75,7 @@ const Contact = () => {
       className="w-full py-5 pt-10 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center">
-        <Title title1={"Contact me"} title2={"Contact me"} />
+        <Title title1={"Contact"} title2={"Contact"} />
       </div>
       <div
         className="w-full overflow-x-hidden"
@@ -109,7 +105,7 @@ const Contact = () => {
                 </p>
               )}
               <div className="w-full flex flex-col lgl:flex-row gap-10">
-                <div className="w-full lgl:w-1/2 flex flex-col gap-4">
+                <div className="w-full lgl:w-full flex flex-col gap-4">
                   <p className="text-sm text-gray-400 uppercase tracking-wide">
                     Your name
                   </p>
@@ -119,21 +115,6 @@ const Contact = () => {
                     name="from_name"
                     className={`${
                       errMsg === "Username is required!" && "outline-[#262525]"
-                    } bg-[#262525] p-3 rounded focus:outline-none focus:border-b-4 focus:border-gray-700`}
-                    type="text"
-                  />
-                </div>
-                <div className="w-full lgl:w-1/2 flex flex-col gap-4">
-                  <p className="text-sm text-gray-400 uppercase tracking-wide">
-                    Phone Number
-                  </p>
-                  <input
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    value={phoneNumber}
-                    name="phone"
-                    className={`${
-                      errMsg === "Phone number is required!" &&
-                      "outline-[#262525]"
                     } bg-[#262525] p-3 rounded focus:outline-none focus:border-b-4 focus:border-gray-700`}
                     type="text"
                   />
@@ -151,20 +132,6 @@ const Contact = () => {
                     errMsg === "Please give your Email!" && "outline-[#262525]"
                   } bg-[#262525] p-3 rounded focus:outline-none focus:border-b-4 focus:border-gray-700`}
                   type="email"
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <p className="text-sm text-gray-400 uppercase tracking-wide">
-                  Subject
-                </p>
-                <input
-                  onChange={(e) => setSubject(e.target.value)}
-                  value={subject}
-                  name="subject"
-                  className={`${
-                    errMsg === "Plese give your Subject!" && "outline-[#262525]"
-                  } bg-[#262525] p-3 rounded focus:outline-none focus:border-b-4 focus:border-gray-700`}
-                  type="text"
                 />
               </div>
               <div className="flex flex-col gap-4">

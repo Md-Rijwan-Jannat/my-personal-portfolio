@@ -40,7 +40,7 @@ const Navbar = () => {
       }}
     >
       <div className="flex items-center gap-">
-        <h2 className="bg-white text-lg lg:text-2xl uppercase px-1 md:px-1 py-2 md:py-3 text-black font-[700]">
+        <h2 className="bg-designColor text-lg lg:text-2xl uppercase px-1 md:px-1 py-2 md:py-3 text-black font-[700]">
           {" "}
           Rijwan
         </h2>
@@ -84,7 +84,7 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-8 py-2 relative">
               <div className="flex items-center gap-">
-                <h2 className="bg-white text-lg lg:text-2xl uppercase px-1 md:px-1 py-2 md:py-3 text-black font-[700]">
+                <h2 className="bg-designColor text-lg lg:text-2xl uppercase px-1 md:px-1 py-2 md:py-3 text-black font-[700]">
                   {" "}
                   Rijwan
                 </h2>

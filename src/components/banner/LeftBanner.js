@@ -44,11 +44,11 @@ const LeftBanner = () => {
               <span className="text-red-400">{"name"}</span>
               <span className="pl-2 text-green-400">{"className"}</span>
               <span className="text-white">{"="}</span>
-              <span className="text-yellow-400 ">{`
+              <span className="text-designColor ">{`
             text-white text-lg`}</span>
               <span>{">"}</span>
               <br></br>
-              <span className="text-lg text-gray-500">MD Rijwan Jannat</span>
+              <span className="text-lg text-white">MD Rijwan Jannat</span>
               <br></br>
               <span>{"</"}</span>
               <span className="text-red-400">{"name"}</span>
@@ -56,19 +56,19 @@ const LeftBanner = () => {
             </div>
             <div className="text-xs text-start md:text-sm font-semibold">
               <span>{"<"}</span>
-              <span className="text-red-400">{"h1"}</span>
+              <span className="text-red-400">{"passionate"}</span>
               <span className="pl-2 text-green-400">{"className"}</span>
               <span className="text-white">{"="}</span>
-              <span className="text-yellow-400 ">{`'text-xl font-semibold flex    w-full md:text-start'`}</span>
+              <span className="text-designColor ">{`'text-xl font-semibold flex    w-full md:text-start'`}</span>
               <span>{">"}</span>
             </div>
             <div className="flex">
-              <p className="text-gray-500"> Hello: I am</p>
-              <span className="text-cyan-400 px-2">{text}</span>
+              <p className="text-white"> Hello: I am</p>
+              <span className="text-green-500 px-2">{text}</span>
             </div>
             <div className="text-xs md:text-sm text-start font-semibold">
               <span>{"</"}</span>
-              <span className="text-red-400">{"h1"}</span>
+              <span className="text-red-400">{"passionate"}</span>
 
               <span>{">"}</span>
             </div>
@@ -79,7 +79,7 @@ const LeftBanner = () => {
               <span className="text-red-400">{"objective"}</span>
               <span className="pl-2 text-green-400">{"className"}</span>
               <span className="text-white">{"="}</span>
-              <span className="text-yellow-400">{`'text-sm'`}</span>
+              <span className="text-designColor">{`'text-sm'`}</span>
               <span>{">"}</span>
             </div>
             As a MERN stack developer, I craft digital marvels with my code,
@@ -99,17 +99,29 @@ const LeftBanner = () => {
               <span className="text-blue-400">{"SocialButtons"}</span>
               <span className="pl-2 text-green-400">{"className"}</span>
               <span className="text-white">{"="}</span>
-              <span className="text-yellow-400">{`'icons'`}</span>
+              <span className="text-designColor">{`'icons'`}</span>
               <span>{">"}</span>
             </div>
             <div className="flex flex-col md:flex-row gap-4 md:gap-4 ">
-              <a href="https://www.linkedin.com/in/md-rijwan-developer-3353362ba?trk=contact-info">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/md-rijwan-developer-3353362ba?trk=contact-info"
+              >
                 <AiFillLinkedin className=" text-3xl md:text-2xl text-gray-200  hover:text-red-400 cursor-pointer" />
               </a>
-              <a href="https://www.facebook.com/mdrijwanjannat">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/mdrijwanjannat"
+              >
                 <AiFillFacebook className="text-3xl md:text-2xl cursor-pointer text-gray-200  hover:text-red-400" />
               </a>
-              <a href="https://github.com/Md-Rijwan-Jannat">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/Md-Rijwan-Jannat"
+              >
                 <AiFillGithub className="text-3xl md:text-2xl text-gray-200  hover:text-red-400 cursor-pointer" />{" "}
               </a>
             </div>
@@ -128,7 +140,7 @@ const LeftBanner = () => {
 
             <span className="pl-2 text-green-400">{"href"}</span>
             <span className="text-white">{"="}</span>
-            <span className="text-yellow-400">{`'../rijwan jannat resume.pdf'`}</span>
+            <span className="text-designColor">{`'../rijwan jannat resume.pdf'`}</span>
             <span className="pl-2 text-green-400">{"downlaod"}</span>
 
             <span>{">"}</span>

@@ -3,8 +3,10 @@ import { Title } from "../ui/Title/Title";
 import { featuresData } from "../../data/data";
 import Card from "./Card";
 
+// Add this line to initialize AOS
+
 const Features = () => {
-  const itemsPerPage = 6;
+  const itemsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -19,11 +21,11 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="w-full py-16 border-b-[1px] border-b-black md:h-[1400px] xl:h-[1200px] md:relative"
+      className="w-full py-16 border-b-[1px] border-b-black md:relative"
     >
-      <Title title1={"Features and Skills"} title2={"Features and Skills"} />
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
-        {paginatedData.map((item) => (
+      <Title title1={"Skills"} title2={"Skills"} />
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+        {paginatedData.map((item, index) => (
           <Card item={item} key={item.id} />
         ))}
       </div>
@@ -32,7 +34,7 @@ const Features = () => {
           length: Math.ceil(featuresData.length / itemsPerPage),
         }).map((_, index) => (
           <div
-            className="flex items-center justify-center w-[100px] gap-3 md:gap-5"
+            className="flex items-center justify-center w-[80px] gap-3"
             key={index}
             onClick={() => handlePageChange(index + 1)}
           >
