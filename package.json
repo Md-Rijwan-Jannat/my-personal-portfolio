@@ -8,8 +8,10 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
+    "clsx": "^2.1.0",
     "emailjs-com": "^3.2.0",
-    "framer-motion": "^8.4.2",
+    "framer-motion": "^8.5.5",
+    "mini-svg-data-uri": "^1.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
@@ -21,6 +23,7 @@
     "react-slick": "^0.29.0",
     "react-tabs": "^6.0.2",
     "slick-carousel": "^1.8.1",
+    "tailwind-merge": "^2.3.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -8,7 +8,7 @@ const Card = ({ item: { title, des, icon } }) => {
       data-aos-delay="200"
       data-aos-once="true"
       data-aos-mirror="false"
-      className="w-full border-2 border-designColor px-3 py-4 rounded-lg shadow-shadowTwo flex items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-black hover:to-[#1e2024] transition-colors duration-100 group"
+      className="w-full border-2 border-designColor px-3 py-4 rounded-lg shadow-shadowTwo flex items-center group hover:bg-gradient-to-b hover:from-black hover:to-[#1e202484] transition-colors duration-100 group"
     >
       <div className="h-[220px] md:h-[190px] overflow-y-hidden">
         <div className="flex h-full flex-col translate-y-16 group-hover:translate-y-0 transition-transform duration-500">

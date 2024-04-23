@@ -21,7 +21,7 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="w-full py-16 border-b-[1px] border-b-black md:relative"
+      className="w-full py-16 border-b-[1px] border-b-black mt-[100px] md:-mt-[200px] lg:-mt-[100px] xl:-mt-[300px]"
     >
       <Title title1={"Skills"} title2={"Skills"} />
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">

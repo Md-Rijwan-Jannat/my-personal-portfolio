@@ -10,22 +10,29 @@ import Projects from "./components/projects/Projects";
 import Location from "./components/Location/Location";
 import { LoadingSpinner } from "./components/ui/LoadingSpinner/LoadingSpinner";
 import About from "./components/About/About";
+import BackgroundGradientAnimation from "./components/ui/BackgroundGradientAnimation/BackgroundGradientAnimation";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Wait for the window to load
-    window.onload = () => {
-      setTimeout(() => {
+    // Check if window.onload has already been triggered
+    const checkWindowLoad = () => {
+      if (document.readyState === "complete") {
         setIsLoading(false);
-      }, 500);
+      }
     };
+
+    // Check for window load after 500ms
+    const timeout = setTimeout(checkWindowLoad, 500);
+
+    // Cleanup
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
     <div
-      className={`w-full h-auto bg-bodyColor text-lightText ${
+      className={`w-full h-auto bg-bodyColor text-lightText overflow-hidden ${
         isLoading ? "overflow-hidden" : ""
       }`}
     >
@@ -35,7 +42,10 @@ function App() {
         <>
           <Navbar />
           <div className="max-w-screen-xl mx-auto px-3">
-            <Banner />
+            <BackgroundGradientAnimation>
+              <Banner />
+            </BackgroundGradientAnimation>
+
             <Features />
             <Projects />
             <About />
