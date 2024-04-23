@@ -28,7 +28,7 @@ const Footer = () => {
           Jannat
         </h2>
       </div>
-      <div className="flex items-center justify-center w-full">
+      <div className="flex items-center justify-center w-full mt-5">
         <Links />
       </div>
     </div>
